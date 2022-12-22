@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const host = "http://localhost:3333";
+export const host = "https://jsd-final-backend-pakajji.vercel.app";
 
 export const api = axios.create({
   baseURL: `${host}`,

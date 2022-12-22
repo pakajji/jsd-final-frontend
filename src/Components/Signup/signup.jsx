@@ -24,7 +24,7 @@ export default function SignUp() {
         lname: data.get('lastName')
     }
 
-    fetch('http://localhost:3333/register', {
+    fetch('https://jsd-final-backend-pakajji.vercel.app/register', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',

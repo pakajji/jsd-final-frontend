@@ -22,7 +22,7 @@ export default function SignIn() {
         email: data.get('email'),
         password: data.get('password'),
     }
-  fetch('http://localhost:3333/login', {
+  fetch('https://jsd-final-backend-pakajji.vercel.app/login', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

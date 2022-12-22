@@ -16,7 +16,7 @@
 //   // const handleSubmit = async (e) => {
 //   //   e.preventDefault();
 //   //   try {
-//   //     const url = ":http//localhost:3333/api/auth";
+//   //     const url = ":https://jsd-final-backend-pakajji.vercel.app/api/auth";
 //   //     const { data: res } = await axios.post(url, data);
 //   //     localStorage.setItem("token", res.data);
 //   //     // window.location = "/";

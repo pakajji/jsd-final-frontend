@@ -30,7 +30,7 @@ function PersonalProfile() {
   //picProfile ? picProfile : picUrl
 
   const addProflie = async (profile) => {
-    await axios.put('http://localhost:3333/profile', profile);
+    await axios.put('https://jsd-final-backend-pakajji.vercel.app/profile', profile);
 }
   
   const submitProfile = (event) => {

@@ -42,7 +42,7 @@
 //       // Submit the form
 //     }
 //     try {
-//       const url = "http://localhost:3333/api/users";
+//       const url = "https://jsd-final-backend-pakajji.vercel.app/api/users";
 //       const { data: res } = await axios.post(url, data);
 //       console.log(res.message);
 //       navigate("/login");
