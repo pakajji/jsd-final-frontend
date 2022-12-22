@@ -23,7 +23,7 @@ export default function SignIn() {
   fetch('https://jsd-final-backend-pakajji.vercel.app/login', {
   method: 'POST',
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   },
   body: JSON.stringify(jsonData),
 })
