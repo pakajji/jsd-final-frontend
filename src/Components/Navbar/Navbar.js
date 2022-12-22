@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 //import UserContext from '../Context/UserContext'
 import online from '../../img/online.png'
 import offline from '../../img/offline.png'
-import axios from 'axios';
+//import axios from 'axios';
 
 const Navbar = () => {
 
