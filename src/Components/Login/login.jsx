@@ -18,7 +18,7 @@ export default function SignIn() {
     const data = new FormData(event.currentTarget);
     const jsonData = {
         email: data.get('email'),
-        password: data.get('password'),
+        password: data.get('password')
     }
   fetch('https://jsd-final-backend-pakajji.vercel.app/login', {
   method: 'POST',
