@@ -20,14 +20,14 @@ export default function SignIn() {
         email: data.get('email'),
         password: data.get('password')
     }
-//   fetch('https://jsd-final-backend.vercel.app/login', {
+//   fetch('https://jsd-backend-edited.vercel.app/login', {
 //   method: 'POST',
 //   headers: {
 //     'Content-Type': 'application/json'
 //   },
 //   body: JSON.stringify(jsonData),
 // })
-  await axios.post('https://jsd-final-backend.vercel.app/login', JSON.stringify(jsonData), {
+  await axios.post('https://jsd-backend-edited.vercel.app/login', JSON.stringify(jsonData), {
     headers: {
       'Content-Type': 'application/json'
     }

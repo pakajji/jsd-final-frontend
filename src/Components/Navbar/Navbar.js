@@ -19,7 +19,7 @@ const Navbar = () => {
     const [logIn, setLogIn] = useState(true)
     // useEffect(() => {
     //     const token = localStorage.getItem("token");
-    //     fetch('https://jsd-final-backend.vercel.app/authen', {
+    //     fetch('https://jsd-backend-edited.vercel.app/authen', {
     //         method: 'POST',
     //         headers: {
     //             'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const Navbar = () => {
         const token = localStorage.getItem("token");
         async function getResNav () {
         try {
-          const response = await axios.post('https://jsd-final-backend.vercel.app/authen', null, {
+          const response = await axios.post('https://jsd-backend-edited.vercel.app/authen', null, {
             headers: {
               'Content-Type': 'application/json',
               'Authorization': 'Bearer ' + token

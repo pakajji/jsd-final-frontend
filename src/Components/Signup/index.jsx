@@ -42,7 +42,7 @@
 //       // Submit the form
 //     }
 //     try {
-//       const url = "https://jsd-final-backend.vercel.app/api/users";
+//       const url = "https://jsd-backend-edited.vercel.app/api/users";
 //       const { data: res } = await axios.post(url, data);
 //       console.log(res.message);
 //       navigate("/login");

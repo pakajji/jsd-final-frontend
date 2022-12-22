@@ -23,14 +23,14 @@ export default function SignUp() {
         lname: data.get('lastName')
     }
 
-//     fetch('https://jsd-final-backend.vercel.app/register', {
+//     fetch('https://jsd-backend-edited.vercel.app/register', {
 //     method: 'POST',
 //     headers: {
 //     'Content-Type': 'application/json',
 //   },
 //   body: JSON.stringify(jsonData),
 // })
-  axios.post('https://jsd-final-backend.vercel.app/register', JSON.stringify(jsonData), {
+  axios.post('https://jsd-backend-edited.vercel.app/register', JSON.stringify(jsonData), {
     headers: {
       'Content-Type': 'application/json'
     }

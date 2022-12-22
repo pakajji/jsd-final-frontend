@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: 'https://jsd-final-backend.vercel.app',
+  baseURL: 'https://jsd-backend-edited.vercel.app',
   withCredentials: true,
   validateStatus: () => true,
 });
@@ -14,13 +14,13 @@ const ActivityContextProvider = ({ children }) => {
 
     //เพิ่ม/อัพเดตการ์ดactivity
     const addActivity = async (activity) => {
-            await axios.put(`https://jsd-final-backend.vercel.app/activity/${activity.id}`, activity);
+            await axios.put(`https://jsd-backend-edited.vercel.app/activity/${activity.id}`, activity);
             setShouldUpdate(true)
     }
 
     //ลบการ์ดactivity
     const removeActivity = async (id) => {
-            await axios.delete(`https://jsd-final-backend.vercel.app/activity/${id}`);
+            await axios.delete(`https://jsd-backend-edited.vercel.app/activity/${id}`);
             setShouldUpdate(true)
     }
 
@@ -32,15 +32,15 @@ const ActivityContextProvider = ({ children }) => {
 
     //อัพเดทกราฟพาย
     const activitiesDuration = async () => {
-      const run = await axios.get('https://jsd-final-backend.vercel.app/activity/run');
+      const run = await axios.get('https://jsd-backend-edited.vercel.app/activity/run');
       setRunDuration(run.data)
-      const walk = await axios.get('https://jsd-final-backend.vercel.app/activity/walk');
+      const walk = await axios.get('https://jsd-backend-edited.vercel.app/activity/walk');
       setWalkDuration(walk.data)
-      const swimming = await axios.get('https://jsd-final-backend.vercel.app/activity/swimming');
+      const swimming = await axios.get('https://jsd-backend-edited.vercel.app/activity/swimming');
       setSwimmingDuration(swimming.data)
-      const bicycleride = await axios.get('https://jsd-final-backend.vercel.app/activity/bicycleride');
+      const bicycleride = await axios.get('https://jsd-backend-edited.vercel.app/activity/bicycleride');
       setBicyclerideDuration(bicycleride.data)
-      const hiking = await axios.get('https://jsd-final-backend.vercel.app/activity/hiking');
+      const hiking = await axios.get('https://jsd-backend-edited.vercel.app/activity/hiking');
       setHikingDuration(hiking.data)
     }
 
@@ -53,7 +53,7 @@ const ActivityContextProvider = ({ children }) => {
       setIsLoading(true);
       async function getActivityCard() {
         try {
-          const activity = await axios.get('https://jsd-final-backend.vercel.app/activity');
+          const activity = await axios.get('https://jsd-backend-edited.vercel.app/activity');
           setActivities(activity.data)
           activitiesDuration()
           setIsLoading(false)
