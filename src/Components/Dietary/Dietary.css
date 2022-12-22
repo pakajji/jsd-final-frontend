@@ -1,0 +1,88 @@
+.blue {
+    background-color: #86e3ce;
+}
+
+.green {
+    background-color: #d0e6a5;
+}
+
+.yellow {
+    background-color: #ffdd94;
+}
+
+.red {
+    background-color: #fa897b;
+}
+
+.purple {
+    background-color: #ccabd8;
+}
+
+
+h1.meal_today {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 64px;
+}
+
+.dietary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dietary-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4,264px);
+    gap: 24px;
+    justify-content: center;
+}
+
+.meal_card {
+    text-align: center;
+    padding: 12px;
+    height: 400px;
+    width: 240px;
+    border-radius: 10em/3em;
+    box-shadow: var(--shadow);
+}
+
+.meal_card h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 48px;
+    color: white;
+    text-shadow: var(--shadow);
+    margin: 16px 0;
+}
+
+.plusMenu_btn {
+    font-size: 64px;
+    color: var(--brown2);
+    line-height: 64px;
+    text-decoration: none;
+    padding: 0 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: 80px;
+}
+
+.plusMenu_btn:hover {
+    background-color: white;
+}
+
+@media only screen and (max-width: 1144px) {
+    .dietary-grid-container {
+        grid-template-columns: repeat(2,264px);
+        grid-template-rows: repeat(2,424px);
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .dietary-grid-container {
+        grid-template-columns: 264px;
+        grid-template-rows: repeat(4,424px);
+    }
+}

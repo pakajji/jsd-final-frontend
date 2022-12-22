@@ -1,0 +1,165 @@
+#notHamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    box-shadow: var(--shadow);
+    height: 64px;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
+}
+
+#notHamburger>ul {
+    margin: 12px 24px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#notHamburger>ul>li {
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 1.2rem;
+}
+
+#notHamburger>ul>li,a:hover {
+    color: var(--brown3);
+    cursor: pointer;
+}
+
+.nav-Profile_Pic {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    place-items: center;
+    margin: 12px 24px;
+    cursor: pointer;
+}
+
+.nav-Login_btn {
+    font-size: 1.2rem;
+    border: 2px solid var(--brown2);
+    background-color: white;
+    color: var(--brown1);
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin: 12px 24px;
+}
+
+.nav-Login_btn:hover {
+    border: 2px solid var(--brown2);
+    background-color: var(--brown2);
+    color: white;
+    cursor: pointer;
+}
+
+.nav-FitClub {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.show-flex {
+    display: flex;
+}
+
+#Hamburger {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brown1);
+}
+
+.online-light {
+    height: 48px;
+}
+
+.online-status {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 4px;
+    background-color: none;
+    border: none;
+}
+
+button.online-status {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 4px;
+    background-color: white;
+    border: none;
+}
+
+.online-status p {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #notHamburger{
+        display: none;
+    }
+
+    #Hamburger {
+        display: block;
+        position: fixed;
+        box-shadow: var(--shadow);
+        height: 64px;
+        width: 100%;
+        z-index: 2;
+        background-color: white;
+    }
+    
+    #Hamburger>img {
+        display: block;
+        height: 48px;
+        margin-left: 16px;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+    
+    .ham-list {
+        flex-direction: column;
+        list-style-type: none;
+        width: 200px;
+        margin-top: 0;
+        align-items: center;
+    }
+    
+    .ham-list>li {
+        display: flex;
+        justify-content: center;
+        margin-left: -40px;
+        padding: 16px 40px;
+        width: 100%;
+        font-size: 1.6rem;
+        background-color: white;
+    }
+    
+    .ham-list>li:hover {
+        color: var(--brown1);
+        background-color: var(--brown4);
+    }
+    
+    .Profile_Pic_Ham {
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        object-fit: cover;
+        place-items: center;
+        padding: 8px 0;
+    }
+}

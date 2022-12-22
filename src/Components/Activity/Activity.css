@@ -1,0 +1,62 @@
+.activity-card {
+    min-width: 250px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--brown1);
+}
+
+.activity-card:hover {
+    transition: transform 0.15s;
+    transform: scale(1.05);
+}
+
+.blue {
+    background-color: #86e3ce;
+}
+
+.green {
+    background-color: #d0e6a5;
+}
+
+.yellow {
+    background-color: #ffdd94;
+}
+
+.red {
+    background-color: #fa897b;
+}
+
+.purple {
+    background-color: #ccabd8;
+}
+
+.activity-card > h2 {
+    margin: 0;
+}
+
+.activity-detail {
+    text-align: start;
+    margin: 0 16px;
+}
+
+.edit-delete-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-delete-card > div > img ,a>img{
+    height: 20px;
+    padding: 0 8px;
+}
+
+.edit-delete-card > div> img,a>img:hover{
+    cursor: pointer;
+}
+
+.edit-delete-card > span{
+    font-size: 16px;
+    padding-left: 16px;
+}

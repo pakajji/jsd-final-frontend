@@ -1,0 +1,12 @@
+.AllActivity {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.Activity_Summary {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 64px;
+}

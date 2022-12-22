@@ -1,0 +1,129 @@
+.personal {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: center;
+    font-size: 0.8rem;
+    
+}
+
+.personal-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+/* 
+.personal-container .personal-left .personal-pic img {
+    height: auto;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+} */
+
+.personalinfo_box {
+    max-width: 1200px;
+    width: 640px;
+    padding: 30px 20px 70px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.personalinfo_box h1, h2, h3 {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+  }
+
+.personal-form_container {
+    /* margin-top: 18px; */
+    display:grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    
+}
+
+.personal-name_container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 18px;   
+}
+
+.personal-gender_container label {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 18px;
+    padding: 12px 200px;
+    background-color: #fac85d;
+}
+
+.personal-form_container input[type="text"],
+ .personal-form_container input[type="date"], .personal-form_container input[type="number"] {
+    border: 1px ridge;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.personal-form_container select {
+    border: 1px ridge;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.personal-button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-from-btn {
+    background-color: #fac85d;
+    border: 2px transparent;
+    border-radius: 8px;
+    padding: 12px 200px;
+    transition: 0.3s;
+    width: 100%;
+    font-size: large;
+}
+
+.profile-from-btn:hover {
+    background-color: #e4ab31;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.profilepic {
+    height: 240px;
+    width: 240px;
+    border-radius: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .personalinfo_box {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .personal-name_container {
+        flex-wrap: wrap
+    }
+}
