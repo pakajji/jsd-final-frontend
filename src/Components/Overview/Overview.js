@@ -7,7 +7,7 @@ import React , { useEffect } from "react";
 function Overview() {
   useEffect(()=>{
     const token = localStorage.getItem("token");
-    fetch('https://jsd-final-backend-pakajji.vercel.app/authen', {
+    fetch('https://jsd-final-backend.vercel.app/authen', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',

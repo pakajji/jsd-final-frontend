@@ -22,7 +22,7 @@ export default function SignUp() {
         lname: data.get('lastName')
     }
 
-    fetch('https://jsd-final-backend-pakajji.vercel.app/register', {
+    fetch('https://jsd-final-backend.vercel.app/register', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',
