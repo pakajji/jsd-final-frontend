@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import axios from 'axios';
 
 const theme = createTheme();
 
@@ -22,13 +23,18 @@ export default function SignUp() {
         lname: data.get('lastName')
     }
 
-    fetch('https://jsd-final-backend.vercel.app/register', {
-    method: 'POST',
+//     fetch('https://jsd-final-backend.vercel.app/register', {
+//     method: 'POST',
+//     headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(jsonData),
+// })
+  axios.post('https://jsd-final-backend.vercel.app/register', JSON.stringify(jsonData), {
     headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(jsonData),
-})
+      'Content-Type': 'application/json'
+    }
+  })
   .then((response) => {
     response.json()
     alert('register success')

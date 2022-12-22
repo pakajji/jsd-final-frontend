@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 //import UserContext from '../Context/UserContext'
 import online from '../../img/online.png'
 import offline from '../../img/offline.png'
+import axios from 'axios';
 
 const Navbar = () => {
 
@@ -16,31 +17,52 @@ const Navbar = () => {
 
     //สลับปุ่ม Login กับ ProfilePic
     const [logIn, setLogIn] = useState(true)
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
+    //     fetch('https://jsd-final-backend.vercel.app/authen', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Authorization': 'Bearer ' + token
+    //         }
+    //     })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             if (data.status === 'ok') {
+    //                 setLogIn(true)
+    //             } else {
+    //                 setLogIn(false)
+    //             }
+    //         })
+    // }, [])
+
     useEffect(() => {
         const token = localStorage.getItem("token");
-        fetch('https://jsd-final-backend.vercel.app/authen', {
-            method: 'POST',
+        async function getResNav () {
+        try {
+          const response = await axios.post('https://jsd-final-backend.vercel.app/authen', null, {
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + token
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + token
             }
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.status === 'ok') {
-                    setLogIn(true)
-                } else {
-                    setLogIn(false)
-                }
-            })
-    }, [])
+          });
+          if (response.data.status === 'ok') {
+            setLogIn(true);
+          } else {
+            setLogIn(false);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+        } getResNav()
+      }, []);
 
     const showLogIn = logIn ? "hidden" : "show"
     let switchBtn = !logIn
     const showProfilePic = switchBtn ? "hidden" : "show"
 
-    console.log("showLogIn", showLogIn)
-    console.log("showProfilePic", showProfilePic)
+    // console.log("showLogIn", showLogIn)
+    // console.log("showProfilePic", showProfilePic)
     //Popup Profile
     // const [profilePopUp, setProfilePopUp] = useState(false)
     // const duringProfilePopUp = profilePopUp ? "" : "hiddenPopUp"

@@ -8,25 +8,30 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import axios from 'axios';
 
 const theme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const jsonData = {
         email: data.get('email'),
         password: data.get('password')
     }
-  fetch('https://jsd-final-backend.vercel.app/login', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(jsonData),
-})
+//   fetch('https://jsd-final-backend.vercel.app/login', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify(jsonData),
+// })
+  await axios.post('https://jsd-final-backend.vercel.app/login', JSON.stringify(jsonData), {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
   .then((response) => response.json())
   .then((data) => {
     if (data.status === 'ok'){
