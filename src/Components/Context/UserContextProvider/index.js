@@ -6,14 +6,14 @@ const UserContextProvider = ({children}) => {
   // const [info, setInfo] = useState([])
   
   // const getProfile = async () => {
-  //   const information = await axios.get('https://jsd-backend-edited.vercel.app/profile');
+  //   const information = await axios.get('https://pk-be-4p2l.vercel.app/profile');
   //   setInfo(information.data)
   // }
 
   // getProfile()
   // const [user,setUser] = useState([])
   // const getUser = async () => {
-  //   const information = await axios.get('https://jsd-backend-edited.vercel.app/user');
+  //   const information = await axios.get('https://pk-be-4p2l.vercel.app/user');
   //   setUser(information.data)
   // }
   // getUser()

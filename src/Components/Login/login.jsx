@@ -16,22 +16,24 @@ export default function SignIn() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    console.log("data", data);
     const jsonData = {
         email: data.get('email'),
         password: data.get('password')
     }
-//   fetch('https://jsd-backend-edited.vercel.app/login', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify(jsonData),
-// })
-  await axios.post('https://jsd-backend-edited.vercel.app/login', JSON.stringify(jsonData), {
+    fetch('https://pk-be-4p2l.vercel.app/login', {
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
-    }
+    },
+    body: JSON.stringify(jsonData),
   })
+// console.log(jsonData);
+//   await axios.post('https://pk-be-4p2l.vercel.app/login', jsonData, {
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   })
   .then((response) => response.json())
   .then((data) => {
     if (data.status === 'ok'){

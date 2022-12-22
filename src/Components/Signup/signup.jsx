@@ -23,18 +23,18 @@ export default function SignUp() {
         lname: data.get('lastName')
     }
 
-//     fetch('https://jsd-backend-edited.vercel.app/register', {
-//     method: 'POST',
-//     headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(jsonData),
-// })
-  axios.post('https://jsd-backend-edited.vercel.app/register', JSON.stringify(jsonData), {
-    headers: {
-      'Content-Type': 'application/json'
-    }
+      fetch('https://pk-be-4p2l.vercel.app/register', {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(jsonData),
   })
+  // axios.post('https://pk-be-4p2l.vercel.app/register', JSON.stringify(jsonData), {
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   }
+  // })
   .then((response) => {
     response.json()
     alert('register success')

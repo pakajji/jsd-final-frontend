@@ -17,45 +17,45 @@ const Navbar = () => {
 
     //สลับปุ่ม Login กับ ProfilePic
     const [logIn, setLogIn] = useState(true)
-    // useEffect(() => {
-    //     const token = localStorage.getItem("token");
-    //     fetch('https://jsd-backend-edited.vercel.app/authen', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Authorization': 'Bearer ' + token
-    //         }
-    //     })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             if (data.status === 'ok') {
-    //                 setLogIn(true)
-    //             } else {
-    //                 setLogIn(false)
-    //             }
-    //         })
-    // }, [])
-
     useEffect(() => {
         const token = localStorage.getItem("token");
-        async function getResNav () {
-        try {
-          const response = await axios.post('https://jsd-backend-edited.vercel.app/authen', null, {
+        fetch('https://pk-be-4p2l.vercel.app/authen', {
+            method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer ' + token
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
             }
-          });
-          if (response.data.status === 'ok') {
-            setLogIn(true);
-          } else {
-            setLogIn(false);
-          }
-        } catch (error) {
-          console.log(error);
-        }
-        } getResNav()
-      }, []);
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === 'ok') {
+                    setLogIn(true)
+                } else {
+                    setLogIn(false)
+                }
+            })
+    }, [])
+
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
+    //     async function getResNav () {
+    //     try {
+    //       const response = await axios.post('https://pk-be-4p2l.vercel.app/authen', null, {
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //           'Authorization': 'Bearer ' + token
+    //         }
+    //       });
+    //       if (response.data.status === 'ok') {
+    //         setLogIn(true);
+    //       } else {
+    //         setLogIn(false);
+    //       }
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //     } getResNav()
+    //   }, []);
 
     const showLogIn = logIn ? "hidden" : "show"
     let switchBtn = !logIn
